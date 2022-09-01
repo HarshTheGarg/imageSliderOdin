@@ -1,0 +1,50 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    position: relative;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    max-height: 800px;
+}
+
+.img2, .img3, .img4 {
+    display: none;
+}
+
+.sb {
+    height: 100%;
+    width: 40px;
+    background-color: rgb(255, 255, 255);
+    opacity: 0;
+    transition: opacity 300ms ease;
+    position: absolute;
+}
+
+.sbLeft {
+    left: 0;
+}
+
+.sbRight {
+    right: 0;
+}
+
+.sideBarsMain {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.sideBarsContainer {
+    position: relative;
+    height: 500px;
+}
+
+
