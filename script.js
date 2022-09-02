@@ -3,14 +3,20 @@ const container = document.querySelector('.imageContainer')
 const sideBars = document.querySelectorAll('.sb')
 const imageDotsContainer = document.querySelector('.dots')
 
-sideBars.forEach((element) => {
-    element.addEventListener('mouseenter', () => {
-        element.style.opacity = 0.4
-    })
-    element.addEventListener('mouseleave', () => {
-        element.style.opacity = 0
+container.addEventListener('mouseenter', () => {
+    autoImage.stop()
+    sideBars.forEach((ele) => {
+        ele.style.opacity = 0.5
     })
 })
+
+container.addEventListener('mouseleave', () => {
+    autoImage.start()
+    sideBars.forEach((ele) => {
+        ele.style.opacity = 0
+    })
+})
+
 
 document.querySelector('.sbLeft').addEventListener('click', () => {
     prevImage()
@@ -85,15 +91,6 @@ var autoImage = (() => {
 })()
 
 autoImage.start()
-
-container.addEventListener('mouseenter', () => {
-    autoImage.stop()
-})
-
-container.addEventListener('mouseleave', () => {
-    autoImage.start()
-})
-
 
 
 images.forEach((element) => {
