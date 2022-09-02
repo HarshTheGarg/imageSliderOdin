@@ -7,23 +7,50 @@ body {
     position: relative;
 }
 
-img {
-    width: 100%;
-    height: auto;
-    max-height: 800px;
+.images {
+    display: flex;
 }
 
-.img2, .img3, .img4 {
-    display: none;
+.img {
+    width: 100%;
+    height: auto;
+    /* display: none; */
+    max-width: 0;
+    /* max-height: 0; */
+    max-height: 800px;
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity 900ms ease;
+}
+
+.imgVis {
+    /* display: block; */
+    max-width: 100%;
+    opacity: 1;
 }
 
 .sb {
     height: 100%;
-    width: 40px;
-    background-color: rgb(255, 255, 255);
+    width: 4%;
+    max-width: 40px;
+    background-image: linear-gradient(
+        rgba(255, 255, 255, 0.2), 
+        rgba(255, 255, 255, 0.7),
+        rgba(255, 255, 255, 1), 
+        rgba(255, 255, 255, 0.7),
+        rgba(255, 255, 255, 0.2)
+        );
     opacity: 0;
-    transition: opacity 300ms ease;
+    transition: opacity 100ms ease;
     position: absolute;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.arrow {
+    width: 65%;
 }
 
 .sbLeft {
@@ -34,7 +61,7 @@ img {
     right: 0;
 }
 
-.sideBarsMain {
+/* .sideBarsMain {
     position: absolute;
     width: 100%;
     top: 0;
@@ -46,5 +73,5 @@ img {
     position: relative;
     height: 500px;
 }
-
+ */
 
